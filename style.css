@@ -1,0 +1,1077 @@
+/* General Styling */
+:root {
+    --primary-red: #D20000;
+    --dark-grey: #222;
+    --light-grey: #f4f4f4;
+    --white: #fff;
+    --black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+/* Header/Navbar */
+/* Header/Navbar */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Garante que o fundo ocupe a largura total */
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Limita a largura do conteúdo interno */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px 50px; /* Espaçamento interno */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--primary-red);
+}
+
+.specialist-button {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.specialist-button:hover {
+    background-color: #A00000;
+}
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/home.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 800px;
+    margin-right: auto;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+.highlight {
+    color: var(--primary-red);
+}
+
+.cta-button {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    padding: 15px 30px;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, border-color 0.3s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: var(--white);
+    color: var(--black);
+    border-color: var(--dark-grey);
+}
+
+/* Address Box */
+.address-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    padding: 15px 25px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    max-width: 250px;
+    text-align: right;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.address-box p {
+    margin: 0;
+}
+
+/* --- Seção de Cards --- */
+.secondary-section {
+    width: 100%;
+    background-color: var(--black);
+    
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    max-width: 25%;
+    position: relative;
+    color: var(--white);
+    text-align: center;
+}
+
+.card-image-box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--black);
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(30%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+}
+
+.card-subtitle {
+    color: var(--primary-red);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Bloco Vermelho --- */
+.red-block {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 200px 50px;
+    text-align: center;
+}
+
+.red-block-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.red-block-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.red-block-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.red-block-button {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--white);
+    padding: 15px 40px;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.red-block-button:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* --- Menu Hambúrguer (Mobile) --- */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* --- Seção de Modalidades Simples (Imagem e Título) --- */
+.modalidades-section {
+    width: 100%;
+    background-color: var(--black);
+    padding: 0;
+}
+
+.modalidades-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.modalidades-image {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.modalidades-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.modalidades-text {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+}
+
+.modalidades-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-red);
+}
+
+/* --- Seção de Cards de Modalidades (Grid) --- */
+.modalities-grid {
+    width: 100%;
+    background-color: var(--black);
+    padding: 50px;
+}
+
+.modalities-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.modality-card {
+    background-color: var(--black);
+    border: 2px solid var(--primary-red);
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* Borda arredondada */
+    height: 500px; /* Altura aumentada */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.modality-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4);
+    z-index: 1;
+}
+
+.modality-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    height: auto;
+    justify-content: flex-end;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.modality-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-bottom: 10px;
+}
+
+.modality-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.modality-button {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.modality-button:hover {
+    background-color: #A00000;
+}
+
+/* --- Seção de Chamada para Ação (CTA) --- */
+.call-to-action {
+    width: 100%;
+    background-color: var(--black);
+    padding: 0;
+}
+
+.cta-content-wrapper {
+    display: flex;
+    max-width: 100%; /* Ocupa toda a largura da tela */
+    margin: 0;
+    gap: 0; /* Remove o espaçamento */
+    height: 500px; /* Define uma altura fixa para toda a wrapper da seção */
+}
+
+.cta-red-block {
+    position: relative;
+    background-color: var(--primary-red);
+    color: var(--white);
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha o conteúdo (texto e botão) ao final */
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+.cta-text h3 {
+    font-size: 2.2rem; /* Ajustei o tamanho da fonte para o novo layout */
+    font-weight: bold;
+    margin-bottom: 15px; /* Espaçamento menor */
+    line-height: 1.2;
+    text-align: left; /* Garante alinhamento à esquerda */
+    z-index: 2; /* Garante que o texto fique acima da imagem dos lutadores */
+    position: relative; /* Necessário para z-index funcionar */
+}
+
+.cta-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px; /* Espaçamento menor */
+    text-align: left; /* Garante alinhamento à esquerda */
+    max-width: 70%; /* Limita a largura do parágrafo */
+    z-index: 2; /* Garante que o texto fique acima da imagem dos lutadores */
+    position: relative; /* Necessário para z-index funcionar */
+}
+
+.cta-red-button {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 15px 40px;
+    border: none; /* Removendo a borda branca */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    z-index: 2; /* Garante que o botão fique acima da imagem dos lutadores */
+    position: relative; /* Necessário para z-index funcionar */
+}
+
+.cta-red-button:hover {
+    background-color: var(--dark-grey);
+}
+
+.cta-image-middle {
+    position: absolute;
+    bottom: 0; /* Alinha a base da imagem com a parte inferior do bloco vermelho */
+    right: -100px; /* Ajuste para centralizar visualmente na junção */
+    width: 400px; /* Aumentei o tamanho da imagem para ela ter mais destaque */
+    height: auto;
+    z-index: 1; /* Garante que fique atrás do texto e botão */
+}
+
+.cta-image-middle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+}
+
+.cta-image-right {
+    flex: 1;
+    overflow: hidden;
+    height: 100%; /* Garante que a imagem ocupe toda a altura */
+}
+
+.cta-image-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Seção de Depoimentos --- */
+.testimonials-section {
+    width: 100%;
+    background-color: var(--black);
+    padding: 50px 0;
+}
+
+.testimonials-container {
+    max-width: 100%; /* Ocupa toda a largura da tela */
+    margin: 0 auto;
+    padding: 0 50px; /* Mantém o espaçamento nas laterais do conteúdo */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-bottom: 40px;
+}
+
+/* Slick Carousel Customization */
+.testimonials-carousel {
+    /* Não precisa de margin aqui, o padding do container já resolve */
+}
+
+.testimonial-card {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+    display: flex !important; /* Important para sobrepor o display block do slick */
+    flex-direction: column;
+    height: 300px; /* Definindo uma altura fixa para todos os cards */
+    margin: 10px; /* Espaçamento entre os cards no carrossel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 15px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--white);
+}
+
+.stars {
+    color: gold;
+    font-size: 1rem;
+}
+
+.testimonial-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex-grow: 1; /* Permite que o texto ocupe o espaço disponível e force a altura igual */
+    overflow-y: auto; /* Adiciona scroll se o texto for muito longo */
+    margin-top: 10px; /* Espaço entre as estrelas e o texto */
+}
+
+/* Slick Carousel Arrows and Dots */
+.slick-prev, .slick-next {
+    font-size: 0; /* Oculta o texto padrão */
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 10;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: "Font Awesome 6 Free"; /* Usa Font Awesome para ícones */
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--primary-red);
+    opacity: 0.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+    color: #A00000;
+}
+
+.slick-prev:before {
+    content: "\f053"; /* Ícone de seta para a esquerda */
+}
+.slick-next:before {
+    content: "\f054"; /* Ícone de seta para a direita */
+}
+
+.slick-prev {
+    left: 15px; /* Ajusta a posição da seta esquerda para dentro do padding */
+}
+.slick-next {
+    right: 15px; /* Ajusta a posição da seta direita para dentro do padding */
+}
+
+/* Slick Dots */
+.slick-dots {
+    position: absolute;
+    bottom: -30px; /* Posição das bolinhas de navegação */
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #ccc;
+    border-radius: 50%;
+    opacity: 0.75;
+    transition: background 0.3s;
+}
+
+.slick-dots li.slick-active button {
+    background: var(--primary-red);
+    opacity: 1;
+}
+
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 50px  0  20px;
+    width: 100%; /* Garante que o footer ocupe a largura total da tela */
+}
+
+.footer-container {
+     /* Limita a largura do conteúdo interno */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 100px 50px; /* Adiciona o padding lateral para o conteúdo */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
+}
+
+.footer-col-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-col-1 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-col-1 .logo img {
+    height: 40px;
+}
+
+.footer-col-1 .logo span {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: var(--primary-red);
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-social-icons a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer-social-icons a:hover {
+    color: var(--primary-red);
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: right;
+    align-items: flex-end;
+}
+
+.footer-hours span {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-contact {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-contact a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+    color: var(--primary-red);
+}
+
+.footer-address p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* --- Media Queries para Mobile/Tablet --- */
+@media (max-width: 768px) {
+    /* --- Header e Menu --- */
+    .header {
+        position: relative;
+        background-color: var(--black);
+    }
+    .header-container {
+        padding: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 999;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+    }
+    .navbar.active {
+        display: flex;
+        transform: translateY(0);
+    }
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .specialist-button {
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+    
+    /* --- Hero Section (Seção Principal) --- */
+    .hero-section {
+        height: auto;
+        padding: 50px 20px;
+        text-align: center;
+        background-position: 80% center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .hero-content {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 12px 25px;
+        margin-top: 0;
+    }
+    .address-box {
+        position: static;
+        text-align: center;
+        margin-top: 30px;
+        bottom: auto;
+        right: auto;
+        max-width: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        color: var(--white);
+    }
+
+    /* --- Seção de Cards --- */
+    .secondary-section {
+        padding: 0 20px;
+    }
+    .cards-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .card {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+    .card-text {
+        position: static;
+        transform: none;
+        padding: 15px 0;
+        background-color: var(--black);
+    }
+    .card-image-box {
+        min-height: 100px;
+    }
+    .card-image-box img {
+        filter: brightness(30%);
+    }
+    
+    /* --- Bloco Vermelho --- */
+    .red-block {
+        padding: 50px 100px;
+        text-align: center;
+    }
+    .red-block-content {
+        max-width: 100%;
+    }
+    .red-block-title {
+        font-size: 2rem;
+    }
+    .red-block-text {
+        font-size: 1rem;
+    }
+
+    /* --- Seção de Modalidades Simples (Imagem e Título) --- */
+    .modalidades-content {
+        flex-direction: column;
+        height: auto;
+    }
+    .modalidades-image {
+        width: 100%;
+        height: 250px;
+    }
+    .modalidades-text {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    .modalidades-title {
+        font-size: 2.5rem;
+    }
+
+    /* --- Seção de Cards de Modalidades (Grid) --- */
+    .modalities-grid {
+        padding: 30px 20px;
+    }
+    .modalities-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .modality-card {
+        height: 350px;
+    }
+    .modality-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .modality-description {
+        flex-grow: 1;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* --- Seção de Chamada para Ação (CTA) --- */
+    .cta-content-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .cta-red-block {
+        padding: 40px 20px;
+        text-align: center;
+        order: 2;
+        align-items: center;
+    }
+
+    .cta-text h3 {
+        font-size: 1.8rem;
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .cta-text p {
+        font-size: 0.9rem;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .cta-red-button {
+        display: inline-block;
+        margin: 20px auto; /* Adicionando margem para separar do texto e da imagem */
+    }
+
+    .cta-image-middle {
+        position: static;
+        width: 80%;
+        margin: 20px auto 0 auto; /* Ajustado para ficar abaixo do botão */
+        display: block;
+        order: 3; /* Move a imagem para o final */
+    }
+
+    .cta-image-middle img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cta-image-right {
+        height: 250px;
+        order: 1; /* A imagem da academia fica no topo no mobile */
+    }
+    
+    /* --- Seção de Depoimentos (Carrossel) --- */
+    .testimonials-container {
+        padding: 0 10px;
+    }
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .testimonials-carousel {
+        margin: 0;
+    }
+    .testimonial-card {
+        margin: 10px auto;
+        max-width: 90%;
+        height: 280px;
+    }
+    .testimonial-text {
+        overflow-y: auto;
+    }
+    .slick-prev, .slick-next {
+        width: 30px;
+        height: 30px;
+    }
+    .slick-prev:before, .slick-next:before {
+        font-size: 24px;
+    }
+    .slick-prev {
+        left: 0px;
+    }
+    .slick-next {
+        right: 0px;
+    }
+    .slick-dots {
+        bottom: -25px;
+    }
+
+   .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 0 20px 30px;
+    }
+
+    .footer-col-1 {
+        align-items: center;
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-info {
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-contact {
+        gap: 25px;
+    }
+
+    .footer-address {
+        order: 3;
+    }
+
+    .footer-social-icons {
+        order: 2;
+    }
+    
+    .footer-bottom {
+        font-size: 0.7rem;
+    }
+}
